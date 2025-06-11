@@ -263,7 +263,7 @@ class PingingDashboard:
         
     def setup_ui(self):
         """Setup the UI, including ping slider and page refresh logic."""
-        self.root.title(f"7740 {self.device_type} Status Dashboard")
+        self.root.title(f"{self.device_type} Status Dashboard")
         self.root.configure(bg='#1e1e1e')
         self.root.geometry("1024x768")
         self.root.minsize(800, 600)  # Minimum size to prevent shrinking too small
@@ -280,7 +280,7 @@ class PingingDashboard:
 
         # Logo
         try:
-            img = Image.open('Collins Aerospace logo (white).png')
+            img = Image.open('dashboard.png')
             img = img.resize((200, 60))
             tkimage = ImageTk.PhotoImage(img)
             self.imagelbl = tk.Label(title_frame, image=tkimage, bg='#1e1e1e')
